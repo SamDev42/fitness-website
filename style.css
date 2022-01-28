@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body,html{
+    /* */
+    width: 100%;
+}
+
+body.active{
+    overflow-y: hidden;
+    overflow-x: hidden; 
+}
+
+nav{
+    display: flex;
+    background: black;
+    padding: 0.6% 10%;
+    color: white;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;    
+}
+
+.nav-links li{
+    padding: 0 25px ;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.nav-links li a:hover{
+    color: rgb(206, 13, 13);
+}
+
+.header-bg{
+    background: url(img/sall1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 93.2vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    color: white;
+}
+
+.header-bg h1{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+
+.header-bg p{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: -30px;
+    margin-bottom: 2rem;
+}
+
+.header-bg a{
+    padding: 10px 35px;
+    background: rgb(238, 6, 6);
+    color: white;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.header-bg a:hover{
+    background: black ;
+}
+
+.menu{
+    display: none;
+    cursor: pointer;
+}
+
+.menu span{
+    /* content: ''; */
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 6px auto;
+    background: white;
+    transition: 0.5s;
+}
+
+.menu.is-actife span:nth-child(1){
+    transform:translateY(8px) rotate(45deg) ;
+}
+
+.menu.is-actife span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.is-actife span:nth-child(3){
+    transform:translateY(-10px) rotate(-45deg) ;
+} 
+
+@media screen and (max-width: 800px){
+    .menu{
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        height: 95vh;
+        justify-content: center;
+        position: absolute;
+        background: black;
+        width: 100%;
+        top: -100vh;
+        /* top: 43px; */
+        left: 0;
+        transition: 1s;
+        
+    }
+
+    .nav-links li{
+        margin: 30px 0;
+    }
+
+    .nav-links li a {
+        font-size: 25px;
+
+    }
+    
+    /* nav{
+        padding: 0.5rem 10% ;
+    } */
+
+    .header-bg h1{
+        font-size: 60px;
+    }
+
+    .header-bg p{
+        font-size: 30px;
+        margin-top: 0.1rem;
+    }
+
+    /* .header-bg{
+        padding-left: 2rem;
+    } */
+
+    .topbar{
+        top: 40px;
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.Offer-section{
+    width: 80%;
+    margin: 150px auto;
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.up-title{
+    margin-bottom: -10px;
+    font-weight: bold;
+    color: red;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.tect{
+    line-height: 50px;
+    font-weight: 600;
+}
+
+.fa-check-circle{
+    padding-right: 10px;
+    color: red;
+}
+
+.offer-img{
+    overflow: hidden;
+    
+}
+
+.offer-img img{
+    width: 100%;
+    display: block;
+    min-height: 400px;
+}
+
+@media screen and (max-width: 900px){
+    .Offer-section{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .offer-img{
+        margin-top: 20px;
+        height: 320px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.Plans-section{
+    background: black; 
+    text-align: center;
+    padding: 100px 0; 
+}
+
+.Plans-title{
+    margin-bottom: 50px;
+    color: white;
+}
+
+.Plans-title h1{
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 0.5rem;
+}
+
+.Plans-title p{
+    font-size: 20px;
+}
+
+.All-Plans-col{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan-col{
+    flex-basis: 25%;
+    background: white;
+    padding: 30px 20px;
+    min-height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    min-height: 400px;
+    margin: 0 auto;
+    /* margin-bottom: 1rem; */
+}
+
+
+.font{
+    font-size: 48px;
+    color: red;
+    margin-bottom: -30px;
+}
+
+.plan-col h1{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.plan-col p{
+    margin-bottom: 1rem;    
+}
+
+
+
+
+.plan-col  a{
+    color: white;
+    width: 100%;    width: 100%;
+    background: red;
+    padding: 10px 0;
+    border-radius: 5px;
+    display: block;
+}
+
+@media screen and (max-width:650px ) {
+    .All-Plans-col{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .plan-col{
+        margin-bottom: 2rem;min-width: 70% ;
+    }
+
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------ */
+
+
+.title-grid{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.trainers-section{
+    width: 70%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 0.5fr);
+    /* grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr; */
+    grid-template-areas:
+    "col1 text1 " 
+    "col1 col2  "
+    "col3 col2"
+    "col3 col4"
+    "text2 col4 ";
+}
+
+.trainers-col{
+    width: 90%;
+    max-height: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.trainers-col img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.col1{
+    grid-area: col1;
+}
+
+.col2{
+    grid-area: col2;
+}
+
+.col3{
+    grid-area: col3;
+}
+
+.col4{
+    grid-area: col4;
+}
+
+
+@media screen and (max-width: 640px) {
+    .trainers-section{
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 0.5fr);
+        grid-template-areas:
+        "text1 " 
+        "col1"
+        "col1"
+        "col2"
+        "col2"
+        "col3"
+        "col3"
+        "col4"
+        "col4"
+        "tet2";
+    }
+    
+    .trainers-col{
+    width: 100%;
+    
+}
+}
